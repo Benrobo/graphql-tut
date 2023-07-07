@@ -4,9 +4,9 @@ This is just me trying to learn graphql to solve my problems REST api couldn't s
 
 ### Resources
 
-[Graphql Tutorial 4hrs long](https://www.youtube.com/watch?v=yqWzCV0kU_c)
-[Apolo Odyssey Tutorial](https://www.apollographql.com/tutorials/lift-off-part1/01-feature-overview-and-setup)
-[Graphql Javascript SDK](https://graphql.org/code/#javascript)
+[Graphql Tutorial 4hrs long](https://www.youtube.com/watch?v=yqWzCV0kU_c) .
+[Apolo Odyssey Tutorial](https://www.apollographql.com/tutorials/lift-off-part1/01-feature-overview-and-setup) .
+[Graphql Javascript SDK](https://graphql.org/code/#javascript) .
 [Apollo Server](https://www.apollographql.com/docs/apollo-server/getting-started)
 
 ## Basic Concept
