@@ -1,0 +1,19 @@
+{
+  "name": "basic",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon ./dist/app.js",
+    "watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.0",
+    "nodemon": "^2.0.22",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.7.5",
+    "graphql": "^16.7.1"
+  }
+}
