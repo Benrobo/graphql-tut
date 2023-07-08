@@ -1,5 +1,3 @@
-import { ApolloServer } from "@apollo/server";
+import startGqlServer from "./server";
 
-// const server = new ApolloServer({
-
-// })
+startGqlServer();
