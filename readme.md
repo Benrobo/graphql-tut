@@ -244,3 +244,71 @@ Now, let's delve into the integration of controllers with the GraphQL API:
 This breakdown demonstrates how the controllers can be integrated with the GraphQL API to handle the business logic and interact with the MongoDB models. The controllers handle CRUD operations on the models, and the resolver functions in the GraphQL resolvers invoke the corresponding controller functions when processing the GraphQL queries and mutations.
 
 I hope this provides you with a clear understanding of the integration between controllers and the GraphQL API within the given code structure.
+
+## Graphql Types
+
+Graphql uses schema to describe the shape of your available data. This schemas are made up of types.
+A schema defines a collection of `types` and the `relationships` between those types.
+
+```js
+type Book {
+  title: String
+  author: Author
+}
+
+type Author {
+  name: String
+  books: [Book]
+}
+```
+
+The above example shows a schema which has two different object types of `Book` and `Author`.
+
+> Note that the schema is not responsible for defining where data comes from or how it's stored. It is entirely implementation-agnostic.
+
+Each schema is made up of `fields`. Each fields can aswell determine what type of data is returned.
+
+```js
+# This Book type has two fields: title and author
+type Book {
+  title: String # returns a String
+  author: Author # returns an Author
+}
+```
+
+Schema are also made up of `List` fields, which is basically a collection of given type specified.
+for ee, we can have a list fields denoted in this format `[TYPE]`:
+
+```js
+type Author {
+    name: String
+    books: [Books]
+}
+```
+
+Notice `[Books]`, this tells the schema that this field should return a collection of `Books` type.
+
+## Field Nullability.
+
+Most times you want control over what returned. you might require certain query to return certain values which isn't `nullish`. Graphql provides way of doing that using exclamation mark `!`. If you want a field to return null or the exact value, then simply remove the `!` from the field type, else, add the exclamation mark at the right hand side of the field:
+
+```js
+type Author {
+    name: String // This is nullable and should return null
+    name: String! // This isn't nullable and Can't return null.
+}
+```
+
+> If the field are `non-nullable` and your graphql server attempts to return null, then it throws an error.
+
+In case of `List` field.
+
+```js
+type Author {
+    books: [Books!]! // This means, the list Items can't be nullish aswell as the list itself.
+}
+```
+
+- If `!` appears inside the square brackets, the returned list can't include items that are null.
+- If `!` appears outside the square brackets, the list itself can't be null.
+- In any case, it's valid for a list field to return an empty list.
