@@ -1,0 +1,4 @@
+const userResolvers = {
+  Query: {},
+  mutation: {},
+};
