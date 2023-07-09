@@ -11,14 +11,15 @@ const GraphqlSchemaTypeDef = gql`
     getUser(id: ID!): Users
   }
 
+  type Mutation {
+    createUser(user: CreateUserInput): MutationResponse
+    updateUser(user: CreateUserInput): MutationResponse
+  }
+
   interface MutationResponse {
     code: String!
     success: Boolean!
     message: String!
-  }
-
-  type Mutation {
-    createUser(user: CreateUserInput): MutationResponse
   }
 
   type Users {
