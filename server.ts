@@ -2,7 +2,7 @@ import { ApolloServer } from "@apollo/server";
 import GraphqlSchemaTypeDef from "./graphql/schema/index.js";
 import { startStandaloneServer } from "@apollo/server/standalone";
 import { ApolloServerPluginDrainHttpServer } from "@apollo/server/plugin/drainHttpServer";
-import { userResolver } from "./graphql/resolvers";
+import { userResolver } from "./graphql/resolvers/index.js";
 import { expressMiddleware } from "@apollo/server/express4";
 import express from "express";
 import http from "http";
