@@ -1,15 +1,23 @@
 {
   "compilerOptions": {
-    "rootDirs": ["./"],
-    "outDir": "dist",
-    "lib": ["es2020"],
-    "target": "es2020",
-    "module": "es2022",
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "types": ["node"],
-    "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
-    "strict": true
-  }
+    "target": "es6",
+    "module": "node16",
+    "lib": ["dom", "es6", "es2017", "esnext.asynciterable"],
+    "sourceMap": false,
+    "outDir": "./dist",
+    "moduleResolution": "node16",
+    "removeComments": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "emitDecoratorMetadata": false,
+    "experimentalDecorators": true,
+    "baseUrl": "./"
+  },
+  "exclude": ["node_modules"]
 }

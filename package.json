@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "app.js",
   "license": "MIT",
-  "type": "module",
   "scripts": {
     "dev": "nodemon ./dist/server.js",
     "watch": "tsc --watch"
@@ -16,6 +15,8 @@
   },
   "dependencies": {
     "@apollo/server": "^4.7.5",
+    "@graphql-tools/load-files": "^7.0.0",
+    "@graphql-tools/merge": "^9.0.0",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.18.2",

@@ -8,6 +8,7 @@ This is just me trying to learn graphql to solve my problems REST api couldn't s
 [Apolo Odyssey Tutorial](https://www.apollographql.com/tutorials/lift-off-part1/01-feature-overview-and-setup) .
 [Graphql Javascript SDK](https://graphql.org/code/#javascript) .
 [Apollo Server](https://www.apollographql.com/docs/apollo-server/getting-started)
+[Graphql Tool](https://the-guild.dev/graphql/tools/docs/schema-merging#merging-resolvers)
 
 ## Basic Concept
 
