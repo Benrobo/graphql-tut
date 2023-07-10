@@ -7,8 +7,13 @@ const todosResolvers = {
     },
   },
   Mutation: {
-    createTodo: async (e: any) => {
-      // console.log(e);
+    createTodo: async (_: any, args: GraphQLArgs) => {
+      try {
+        const name = (args as any)?.todo?.name;
+        return { name };
+      } catch (e: any) {
+        throw new Error(`Error creating`);
+      }
     },
     deleteTodo: async (_: any, args: GraphQLArgs) => {
       console.log({ args });
